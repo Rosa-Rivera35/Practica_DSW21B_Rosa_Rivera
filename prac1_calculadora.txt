@@ -1,0 +1,38 @@
+//ejecucion de calculadora
+class Calculadora {
+
+    fun sumar(a: Int, b: Int) {
+        println("Suma:")
+        println(a + b)
+    }
+
+    fun restar(a: Int, b: Int) {
+        println("Resta:")
+        println(a - b)
+    }
+
+    fun multiplicar(a: Int, b: Int) {
+        println("Multiplicación:")
+        println(a * b)
+    }
+
+    fun dividir(a: Int, b: Int) {
+        println("División:")
+        if (b != 0) {
+            println(a / b)
+        } else {
+            println("Error: división entre 0") //Noll safety
+        }
+    }
+}
+
+fun main() {
+    val calculadora = Calculadora()
+    val a = 10
+    val b = 0
+
+    calculadora.sumar(a, b)
+    calculadora.restar(a, b)
+    calculadora.multiplicar(a, b)
+    calculadora.dividir(a, b)
+}

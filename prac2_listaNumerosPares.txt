@@ -1,0 +1,17 @@
+//hacer un codigo que permita guardar en una lista
+//Los numeros pares entre el 1 y 100
+
+    // Lista mutable vacía para guardar los pares
+    val numerosPares = mutableListOf<Int>()
+
+    // Bucle del 1 al 100
+    for (i in 1..100) {
+        if (i % 2 == 0) { // condición para números pares
+            numerosPares.add(i)
+        }
+    }
+
+    println("Números pares del 1 al 100:")
+    println(numerosPares)
+
+}

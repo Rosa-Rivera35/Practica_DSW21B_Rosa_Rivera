@@ -1,0 +1,27 @@
+//promedio de calificaciones
+//Crear arreglo con espacio para 5 notas
+//Calcular el promedio usando un bucle
+
+fun main() {
+    val notas: Array<Int?> = arrayOfNulls(5)
+
+    notas[0] = 10
+    notas[1] = 7
+    notas[2] = 9
+    notas[3] = 8
+    notas[4] = 10
+
+    // Variable para acumular la suma
+    var suma = 0
+
+    // Recorrer el arreglo y acumular valores
+    for (i in notas.indices) {
+        println("Estudiante ${i+1}: Nota = ${notas[i]}")
+        suma += notas[i] ?: 0 // si es null, cuenta como 0
+    }
+
+    // Calcular promedio
+    val promedio = suma.toDouble() / notas.size
+
+    println("El promedio de las notas es: $promedio")
+}

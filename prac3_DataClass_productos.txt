@@ -1,0 +1,44 @@
+/*data class Estudiante(
+    val id:Int, 
+    val name:String, 
+    val edad:Int, 
+    val carrera:String,
+    val telefono:String?
+)
+
+    fun main(){
+        //val student1 = Estudiante(1, "Rosa", 21, "Sistemas")
+        //val student2 = Estudiante(2, "Raul", 25, "Sistemas")
+        //val student3 = Estudiante(3, "Vale", 20, "Sistemas")
+        val listStudent = listOf(
+        Estudiante(1, "Rosa", 21, "Sistemas", null),
+        Estudiante(2, "Raul", 25, "Sistemas", null),
+        Estudiante(3, "Vale", 20, "Sistemas", null)
+        )
+        
+        println(listStudent[0])
+        //println(student1)
+        //val ageAverage = (student1.edad + student2.edad + student3.edad) /3
+        //println(ageAverage)
+    }*/
+
+data class Tienda(
+    val id:Int, 
+    val name:String,  
+    val precio: Double,
+    val estado:String, 
+    val promocion: String?
+)
+    fun main(){
+        val producto1 = Tienda(1, "Pan", 0.25, "agotado", null)
+        //val producto2 = Tienda(2, "Queso", 0.60, "disponible", "")
+        //val producto3 = Tienda(3, "Papas", 1.0, "disponible", "4x $1.00")
+       
+        val listTienda = listOf(
+        Tienda(1, "Pan", 0.25, "agotado", null)
+        //Tienda(2, "Queso", 0.60, "disponible", "")
+        //Tienda(3, "Papas", 1.0, "disponible", "4x $1.00")
+       
+        )
+        println(listTienda[0])
+    }

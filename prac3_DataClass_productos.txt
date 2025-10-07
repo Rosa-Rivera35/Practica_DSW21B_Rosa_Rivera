@@ -23,22 +23,24 @@
     }*/
 
 data class Tienda(
-    val id:Int, 
-    val name:String,  
+    val id: Int,
+    val name: String,
     val precio: Double,
-    val estado:String, 
+    val estado: String,
     val promocion: String?
 )
-    fun main(){
-        val producto1 = Tienda(1, "Pan", 0.25, "agotado", null)
-        //val producto2 = Tienda(2, "Queso", 0.60, "disponible", "")
-        //val producto3 = Tienda(3, "Papas", 1.0, "disponible", "4x $1.00")
-       
-        val listTienda = listOf(
-        Tienda(1, "Pan", 0.25, "agotado", null)
-        //Tienda(2, "Queso", 0.60, "disponible", "")
-        //Tienda(3, "Papas", 1.0, "disponible", "4x $1.00")
-       
-        )
-        println(listTienda[0])
-    }
+
+fun main() {
+    val listTienda = listOf(
+        Tienda(1, "Pan", 0.25, "agotado", null),
+        Tienda(2, "Queso", 1.0, "disponible", ""),
+        Tienda(3, "Papas", 1.0, "disponible", "4x $1.00")
+    )
+
+    println("Lista de productos:")
+    listTienda.forEach { println(it) }
+
+    // Calcular promedio de precios
+    val promedioPrecios = listTienda.map { it.precio }.average()
+    println("\nPromedio de precios: $promedioPrecios")
+}
